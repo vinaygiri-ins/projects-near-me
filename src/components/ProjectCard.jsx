@@ -1,5 +1,5 @@
 // src/components/ProjectCard.jsx
-import "./ProjectCard.css";
+import "../styles/ProjectCard.css";
 
 export default function ProjectCard({ project, onDelete }) {
   return (

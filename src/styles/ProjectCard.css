@@ -1,0 +1,47 @@
+/* ProjectCard.css */
+
+/* Container for each card */
+.project-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 12px 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Project title */
+.project-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Project description */
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 12px;
+}
+
+/* Action buttons */
+.project-card button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.project-card button:hover {
+  background: #0056b3;
+}

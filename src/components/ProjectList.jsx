@@ -1,5 +1,6 @@
 // src/components/ProjectList.jsx
 import ProjectCard from "./ProjectCard";
+import "../styles/ProjectList.css";
 
 export default function ProjectList({ projects, onDelete }) {
   if (!projects || projects.length === 0) {

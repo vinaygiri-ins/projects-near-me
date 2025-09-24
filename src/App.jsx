@@ -4,7 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import CreateProject from "./pages/CreateProject";
-import "./App.css";
+import "./styles/App.css";
+
 
 function App() {
   const [projects, setProjects] = useState(() => {
@@ -29,7 +30,9 @@ function App() {
   }
 
   return (
+
     <div className="app">
+      <div className="main-content">
       <NavBar />
       <Routes>
         <Route
@@ -41,6 +44,7 @@ function App() {
           element={<CreateProject onAddProject={addProject} />}
         />
       </Routes>
+      </div>
     </div>
   );
 }

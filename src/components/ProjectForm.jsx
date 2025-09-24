@@ -1,6 +1,7 @@
 // src/components/ProjectForm.jsx
 import { useState } from "react";
-import "./ProjectForm.css";
+import "../styles/ProjectForm.css";
+
 
 export default function ProjectForm({ onAddProject }) {
   const [title, setTitle] = useState("");

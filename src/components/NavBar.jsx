@@ -1,6 +1,6 @@
-// src/components/NavBar.jsx
+import "../styles/NavBar.css";  // link CSS file
+
 import { Link } from "react-router-dom";
-import "./NavBar.css";
 
 export default function NavBar() {
   return (
@@ -13,4 +13,5 @@ export default function NavBar() {
     </header>
   );
 }
+
 

@@ -1,0 +1,37 @@
+/* src/styles/NavBar.css */
+
+/* The header itself */
+.navbar {
+  display: flex;              /* put children in a row */
+  justify-content: space-between; /* spread logo left, links right */
+  align-items: center;        /* vertically center items */
+  padding: 12px 24px;         /* space inside the navbar */
+  background-color: #1976d2;  /* nice blue background */
+  color: white;               /* text color */
+  position: sticky;           /* stays at top when scrolling */
+  top: 0;                     /* stick to top */
+  z-index: 1000;              /* make sure it stays above content */
+}
+
+/* The logo text */
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* The links container */
+.navbar-links {
+  display: flex;              /* lay links in a row */
+  gap: 16px;                  /* space between links */
+}
+
+/* Each link */
+.navbar-links a {
+  color: white;
+  text-decoration: none;      /* remove underline */
+  font-size: 16px;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline; /* hover effect */
+}
