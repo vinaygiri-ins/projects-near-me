@@ -1,17 +1,18 @@
-// src/App.jsx
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import CreateProject from "./pages/CreateProject";
+import { generateProjects } from "./utils/generateProjects";
 import "./styles/App.css";
-
 
 function App() {
   const [projects, setProjects] = useState(() => {
     try {
       const raw = localStorage.getItem("projects");
-      return raw ? JSON.parse(raw) : [];
+      if (raw) return JSON.parse(raw);
+      // If nothing in localStorage, generate dummy data
+      return generateProjects(1000);
     } catch (e) {
       return [];
     }
@@ -30,9 +31,7 @@ function App() {
   }
 
   return (
-
     <div className="app">
-      <div className="main-content">
       <NavBar />
       <Routes>
         <Route
@@ -44,7 +43,6 @@ function App() {
           element={<CreateProject onAddProject={addProject} />}
         />
       </Routes>
-      </div>
     </div>
   );
 }
